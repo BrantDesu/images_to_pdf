@@ -6,7 +6,8 @@ images_paths_list = glob.glob(input_path + r'\*.*')
 
 all_images = []
 for path in images_paths_list:
-    name, extension = path.split('.')
+    path_split = path.split('.')
+    extension = path_split[-1]
     ### PNG images filter ###
     if extension == 'png':
         im = Image.open(path)
